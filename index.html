@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HORIZON Campus Singup  Form </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-utilities.rtl.min">
+        <link rel="stylesheet" href="bootstrap/css/*">
+        
+        
+    </head>
+    <body>
+        <div class="container-fluid p-3 bg-info text-black text-center">
+            <h2>Horizon Campus Form</h2>
+        </div>
+        <a href="index.html">Home/ Registration</a>
+        
+        <div  class="container p-4 bg-white text-white">
+            <form class="row g-1" id="regform">
+                <div class="p-3 text-black text-center"><h3>Registration</h3></div>
+                  <div class="row mb-3 text-black text-dark">
+                      <label for="Name" class="col-sm-3 col-form-label fw-bold form-label">Full Name : </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control is-invalid" id="name" onkeyup="return namevalidation()" 
+                               pattern="(?=.*[a-z])(?=.*[A-Z])" >        
+                    </div>
+                </div>
+                 <div class="row mb-3 text-black text-dark">
+                    <text for="mail" class="col-sm-3 col-form-label fw-bold">Email : </text>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control is-invalid" id="mail" >
+                    </div>
+                </div>
+                 <div class="row mb-3 text-black text-dark">
+                    <text for="passwd1" class="col-sm-3 col-form-label fw-bold">Password : </text>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control is-invalid" id="passwd1" pattern="(?=.*\)(?=.*[a-z])
+                               (?=.*[A-Z]).{8,}" required>
+                    </div>
+                </div>
+                 <div class="row mb-3 text-black text-dark">
+                    <text for="passwd2" class="col-sm-3 col-form-label fw-bold "pattern="(?=.*\)(?=.*[a-z])
+                               (?=.*[A-Z]).{8,}">Re-enter Password : </text>
+                    <div class="col-sm-8" required="true">
+                        <input type="password" class="form-control is-invalid" id="passwd2">
+                    </div>
+                </div>
+                 <div class="row mb-3 text-black text-dark">
+                    <text for="nic" class="col-sm-3 col-form-label fw-bold">NIC : </text>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control is-invalid" id="nic" required 
+                               minlength="10" maxlength="12" >
+                    </div>
+                </div>
+                 <div class="row mb-3 text-black text-dark">
+                    <text for="mobile" class="col-sm-3 col-form-label fw-bold">Mobile No : </text>
+                    <div class="col-sm-8">
+                        <input type="tel" class="form-control is-invalid" id="mobile" autocomplete="tel" >
+                    </div>
+                </div>
+                <div class="row mb-3 text-black text-dark">
+                    <text for="photo" class="col-sm-3 col-form-label fw-bold">Photo : </text>
+                    <div class="col-sm-8">
+                        <input class="form-control is-invalid " type="file" id="photo" accept="image/png, image/jpeg" 
+                               onchange="return imagevalidation()"/>
+                    </div>
+                </div>
+                 <div class="row mb-3 gap-2  mx-auto ">
+                     <button type="Submit" class="col-3 btn bg-success text-white " id="submit" >Submit</button>
+                     <button type="reset" class=" col-8 btn bg-danger text-white " id="clear" onclick="clear">Clear</button>
+                </div>
+            </form>
+        </div>  
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy;2022-December Chinthaka Gihan </p>
+        </footer>
+         <script src="form-validation.js"></script>
+    </body>
+</html>
